@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstApp.MainPage">
+    
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Секундомер" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Label x:Name="timer" 
+                   FontSize="32" 
+                   Padding="30,10,30,10" 
+                   TextColor="Black" 
+                   HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="hours" Text="00"/>
+                        <Span Text=":"/>
+                        <Span x:Name="minutes" Text="00"/>
+                        <Span Text=":"/> 
+                        <Span x:Name="seconds" Text="00"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Button x:Name="startButton" Text="Старт" Clicked="OnStartButtonClicked" 
+                    HorizontalOptions="Center" VerticalOptions="Center"
+                    CornerRadius="20"/>
+            <Button x:Name="resetButton" Text="Сбросить" Clicked="OnResetButtonClicked" 
+                    HorizontalOptions="Center" VerticalOptions="Center"
+                    CornerRadius="20"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>                                                      
